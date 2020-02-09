@@ -8,10 +8,10 @@ podman
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.podman](https://galaxy.ansible.com/devops-toolbox.podman)
+[https://galaxy.ansible.com/devopstoolbox.podman](https://galaxy.ansible.com/devopstoolbox.podman)
 
 ```bash
-ansible-galaxy install devops-toolbox.podman
+ansible-galaxy install devopstoolbox.podman
 ```
 
 Requirements
@@ -49,7 +49,7 @@ Example Playbook
   tasks:
     - name: podman is configured
       import_role:
-        name: devops-toolbox.podman
+        name: devopstoolbox.podman
       vars:
         podman_remove_packages: true
         podman_copy_templates: true
@@ -68,4 +68,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
