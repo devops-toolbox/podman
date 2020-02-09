@@ -1,0 +1,22 @@
+---
+- name: set max_user_namespaces
+  sysctl:
+    name: max_user_namespaces
+    value: "{{ podman_max_user_namespaces }}"
+    sysctl_set: true
+    state: present
+    reload: true
+  become: true
+  tags: notest
+
+- name: create /etc/subuid
+  copy:
+    content: "{{ podman_user }}:{{ podman_subuid }}:{{ podman_subgid }}"
+    dest: /etc/subuid
+  become: true
+
+- name: create /etc/subgid
+  copy:
+    content: "{{ podman_user }}:{{ podman_subuid }}:{{ podman_subgid }}"
+    dest: /etc/subuid
+  become: true

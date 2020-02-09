@@ -1,0 +1,15 @@
+---
+# Install podman packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ podman_packages_remove }}"
+    state: absent
+  become: true
+  when: podman_remove_packages
+
+- name: packages are installed
+  package:
+    name: "{{ podman_packages_install }}"
+    state: present
+  become: true

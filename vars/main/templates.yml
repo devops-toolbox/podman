@@ -1,0 +1,11 @@
+---
+# Configuration templates to copy
+_podman_templates_copy:
+  all:
+    - src: registries.conf.j2
+      dest: /etc/containers/registries.conf
+  CentOS_7: []
+  RedHat_7: []
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []

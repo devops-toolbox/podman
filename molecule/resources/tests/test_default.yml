@@ -1,0 +1,11 @@
+# Molecule managed
+---
+command:
+  info:
+    exit-status: 0
+    exec: "podman version"
+    stdout:
+      - "/Version/"
+    stderr: []
+    timeout: 10000      # in milliseconds
+    skip: false

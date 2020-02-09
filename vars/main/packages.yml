@@ -1,0 +1,53 @@
+---
+# Remove packages: uninstall if found
+_podman_packages_remove:
+  all:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    - docker-client
+    - docker-client-latest
+    - docker-common
+    - docker-latest
+    - docker-latest-logrotate
+    - docker-logrotate
+    - docker-engine
+  CentOS_7: []
+  RedHat_7: []
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []
+
+# Install packages
+_podman_packages_install:
+  all: []
+  CentOS_7:
+    - podman-docker
+    - podman
+    - skopeo
+    - buildah
+    - slirp4netns
+  RedHat_7:
+    - podman-docker
+    - podman
+    - skopeo
+    - buildah
+    - slirp4netns
+  CentOS_8:
+    - podman-docker
+    - podman
+    - skopeo
+    - buildah
+    - slirp4netns
+  RedHat_8:
+    - podman-docker
+    - podman
+    - skopeo
+    - buildah
+    - slirp4netns
+  Fedora_31:
+    - podman-docker
+    - podman
+    - skopeo
+    - buildah
+    - slirp4netns
